@@ -2,9 +2,9 @@
 
 1. Clone files from GitHub
 
-At work directory  
+At your work directory, run command below to download the files  
 ```
-git clone https://
+git clone https://github.com/lees07/service-mesh-adv-homework.git
 ```
 
 
@@ -84,7 +84,7 @@ or open url below in browser
 echo -en "\n$(oc get route istio-ingressgateway -n bookretail-istio-system --template '{{ .spec.host }}')/productpage\n"
 ```
 
-8. monitoring by Kiali and Jaeger  
+8. Monitoring by Kiali and Jaeger  
 
 Access Kiali web console to monitor Bookinfo Demo App  
 ```
