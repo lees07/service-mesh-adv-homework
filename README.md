@@ -83,12 +83,12 @@ curl -o /dev/null -s -w "%{http_code}\n" http://$(oc get route istio-ingressgate
 
 or open url below in browser  
 ```
-echo -en "\n$(oc get route istio-ingressgateway -n bookretail-istio-system --template '{{ .spec.host }}')/productpage\n"
+echo -en "\nhttp://$(oc get route istio-ingressgateway -n bookretail-istio-system --template '{{ .spec.host }}')/productpage\n"
 ```
 
 8. Monitoring by Kiali and Jaeger  
 
 Access Kiali web console to monitor Bookinfo Demo App  
 ```
-echo -en "\n$(oc get route kiali -n bookretail-istio-system --template '{{ .spec.host }}')\n"
+echo -en "\nhttps://$(oc get route kiali -n bookretail-istio-system --template '{{ .spec.host }}')\n"
 ```
