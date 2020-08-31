@@ -58,7 +58,7 @@ oc apply -n bookretail-istio-system -f service-mesh-roll.yaml
 ./bookinfo-istio-inject.sh
 ```
 
-Verify service mesh injected (Pod has 2 container) and delete openshift route of productpage  
+Verify service mesh injected (there are 2 containers per pod) and delete openshift route of productpage  
 ```
 oc get pod -n bookinfo
 oc delete route productpage -n bookinfo
@@ -68,6 +68,7 @@ oc delete route productpage -n bookinfo
 6. Create service mesh control objects  
 
 Create Policy, DestinationRule, Gateway and VirtualService  
+Set mTLS mode of STRICT  
 ```
 oc apply -n bookinfo -f bookinfo-smco-all-mtls.yaml
 ```
