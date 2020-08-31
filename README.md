@@ -11,6 +11,7 @@ git clone https://github.com/lees07/service-mesh-adv-homework.git
 2. Order Lab Env  
 
 Order OPENTLC OpenShift 4 Labs -> OpenShift 4 Service Mesh Lab in OPENTLC Environment  
+And then, login to Openshift 4 Api Server:  
 ```
 oc login <openshift 4 api url> -u '<user>' -p '<password>'
 ```
